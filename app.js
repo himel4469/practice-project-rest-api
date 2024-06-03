@@ -10,12 +10,12 @@ const moon = document.querySelector('.moon');
 async function getcountry() {
   const url = await fetch('https://restcountries.com/v3.1/all');
   const res = await url.json();
-  // console.log(res);
   res.forEach(element => {
     showCountry(element);
   });
 }
 getcountry();
+
 function showCountry(data) {
   const country = document.createElement('div');
   country.classList.add('Country');
